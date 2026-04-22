@@ -9,7 +9,7 @@ export const catalog=[
 		structure: "полиэстр",
 		price: 1600,
 		promo: 800,
-		img: ["/data/1-black.webp", "/data/1-pink.webp"],
+		img: ["https://shopnode.vercel.app/data/1-black.webp", "/data/1-pink.webp"],
 		gender: "female",
 		cat: "Верхняя одежда",
 		hit: true,
