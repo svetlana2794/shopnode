@@ -20,3 +20,5 @@ app.get("/catalog", (req, res) => {
 	let ans=JSON.stringify(catalog[0])
 res.send(ans)
 })
+
+app.listen(PORT, () => console.log("server running"))
