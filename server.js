@@ -3,7 +3,7 @@ import path from "path"
 
 import { catalog } from "./data/data.js"
 
-const PORT=process.env.PORT || 3000
+//const PORT=process.env.PORT || 3000
 const app=express()
 
 app.use(express.urlencoded({
@@ -314,9 +314,9 @@ res.status(201).json({numOrder, bonus: newBonus})
 app.get(/.*/, (req, res) => {
 res.sendFile(path.resolve("dist/index.html"))
 })
-*/
-app.listen(PORT, () => console.log("server running"))
 
+app.listen(PORT, () => console.log("server running"))
+*/
 function zeroDate(date) {
 return date<10 ? "0"+date : date
 }
