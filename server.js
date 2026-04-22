@@ -324,7 +324,7 @@ app.listen(PORT, () => console.log("server running"))
 function zeroDate(date) {
 return date<10 ? "0"+date : date
 }
-
+/*
 let orders=[]
 
 let users=[{
@@ -336,5 +336,5 @@ name: "a",
 bonus: 100
 }]
 
-
+*/
 
