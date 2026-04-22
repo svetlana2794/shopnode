@@ -20,7 +20,7 @@ res.sendFile(path.resolve("dist/index.html"))
 })
 */
 app.get("/", (req, res) => {
-res.send("hello express)
+res.send("hello express")
 })
 
 app.get("/api/catalog", (req, res) => {
