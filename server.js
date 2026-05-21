@@ -23,7 +23,7 @@ res.send(ans)
 
 app.get("/api/catalog", (req, res) => {
 	
-res.send("catalog")
+res.json(catalog)
 })
 
 app.listen(PORT, () => console.log("server running"))
