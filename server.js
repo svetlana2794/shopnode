@@ -8,10 +8,18 @@ const app=express()
 
 app.use(cors({
 origin: 'https://shopnode.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-  allowedHeaders: ['Content-Type', 'Authorization'],  
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Headers'],  
   credentials: true      
 }))
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://shopnode.vercel.app');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE, PATCH');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
+
 
 app.use(express.urlencoded({
 limit: "50mb",
