@@ -7,14 +7,14 @@ const PORT=process.env.PORT || 3000
 const app=express()
 
 app.use(cors({
-origin: 'https://shopver.vercel.app',
+origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Headers'],  
   credentials: true      
 }))
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://shopver.vercel.app');
+  res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE, PATCH');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
