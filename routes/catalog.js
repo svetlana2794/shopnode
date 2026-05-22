@@ -1,9 +1,8 @@
-import express from "express"
 import  { Router } from "express"
 
 const catalogRouter=Router()
 
-import { catalog } from "./data/data.js"
+import { catalog } from "../data/data.js"
 
 catalogRouter.get("/", (req, res) => {
 	
