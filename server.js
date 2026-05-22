@@ -41,7 +41,7 @@ app.get("/api/catalog", (req, res) => {
 	
 let arr=filterCatalog(req, catalog)
 
-ans=arr.map(elem => ({
+let ans=arr.map(elem => ({
 id: elem.id,
 name: elem.name,
 promo: elem.promo,
