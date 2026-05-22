@@ -1,8 +1,9 @@
 import  { Router } from "express"
 
-const catalogRouter=Router()
-
+import { filterCatalog } from "../utils/filter.js"
 import { catalog } from "../data/data.js"
+
+const catalogRouter=Router()
 
 catalogRouter.get("/", (req, res) => {
 	
